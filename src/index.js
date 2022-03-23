@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
+  Routes,
   Switch,
   Route
  } from "react-router-dom";
@@ -12,9 +13,13 @@ import CatImages from "./Components/CatImages";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-    <App/>
-    </Router>
+     <BrowserRouter>
+    <Routes>
+      <Route path="/A" element={<App />}>
+        <Route path="/A/cats/:catId" element={<CatImages />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>,
   </React.StrictMode>,
   document.getElementById('root')
 );
