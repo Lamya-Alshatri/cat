@@ -4,20 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+  BrowserRouter as Router,
+  Switch,
+  Route
+ } from "react-router-dom";
 import CatImages from "./Components/CatImages";
 
 ReactDOM.render(
   <React.StrictMode>
-     <BrowserRouter>
-     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/cats" element={<CatImages />} />
-    </Routes>
-    </BrowserRouter>
+    <Router>
+    <App/>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
