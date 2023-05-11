@@ -50,7 +50,7 @@ function App() {
  {CatIamge?.map((Image) => (
       <Link
         style={{ display: "block", margin: "1rem 0" }}
-        to={`/A/cats/${Image.id}`}
+        to={`/cats/${Image.id}`}
         key={Image}
       >
         Cats
